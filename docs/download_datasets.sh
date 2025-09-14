@@ -6,7 +6,7 @@
 set -e
 
 # 创建数据集目录
-DATASETS_DIR="/catkin_ws/datasets"
+DATASETS_DIR="/catkin_ws/src/rtabmap_ros/datasets"
 mkdir -p "$DATASETS_DIR"
 
 echo "开始下载RTAB-Map所需的数据集..."

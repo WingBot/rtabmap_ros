@@ -21,6 +21,16 @@
   <!-- TF FRAMES -->
   <node pkg="tf" type="static_transform_publisher" name="world_to_map"
     args="0.0 0.0 0.0 0.0 0.0 0.0 /world /map 100" />
+  
+  <!-- 添加缺失的TF变换 -->
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /map /odom 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="odom_to_kinect"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /odom /kinect 100" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="world_to_kinect_gt"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /world /kinect_gt 100" />
 
 
   <group ns="rtabmap">

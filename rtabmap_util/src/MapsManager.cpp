@@ -939,11 +939,11 @@ void MapsManager::publishMaps(
 
 			if(graphGroundOptimized && !tmpGroundPts.empty())
 			{
-    assembledGroundIndex_.buildIndex(rtabmap::FlannIndex::FLANN_INDEX_KDTREE_SINGLE, tmpGroundPts, false, 2.0f);
+    assembledGroundIndex_.buildKDTreeSingleIndex(tmpGroundPts, 15);
 			}
 			if(graphObstacleOptimized && !tmpObstaclePts.empty())
 			{
-				assembledObstacleIndex_.buildIndex(rtabmap::FlannIndex::FLANN_INDEX_KDTREE_SINGLE, tmpObstaclePts, false, 2.0f);
+				assembledObstacleIndex_.buildKDTreeSingleIndex(tmpObstaclePts, 15);
 			}
 			double indexingTime = t.ticks();
 			ROS_INFO("Graph optimized! Time recreating clouds (%d ground, %d obstacles) = %f s (indexing %fs)", countGrounds, countObstacles, addingPointsTime+indexingTime, indexingTime);
@@ -984,7 +984,7 @@ void MapsManager::publishMaps(
 							}
 							if(!assembledGroundIndex_.isBuilt())
 							{
-        assembledGroundIndex_.buildIndex(rtabmap::FlannIndex::FLANN_INDEX_KDTREE_SINGLE, pts, false, 2.0f);
+        assembledGroundIndex_.buildKDTreeSingleIndex(pts, 15);
 							}
 							else
 							{
@@ -1031,7 +1031,7 @@ void MapsManager::publishMaps(
 							}
 							if(!assembledObstacleIndex_.isBuilt())
 							{
-        assembledObstacleIndex_.buildIndex(rtabmap::FlannIndex::FLANN_INDEX_KDTREE_SINGLE, pts, false, 2.0f);
+        assembledObstacleIndex_.buildKDTreeSingleIndex(pts, 15);
 							}
 							else
 							{

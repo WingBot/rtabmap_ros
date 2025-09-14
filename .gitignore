@@ -1,3 +1,8 @@
 dataset/euroc/MH_01_easy.bag
 dataset/tum/rgbd_dataset_freiburg3_long_office_household.bag
 dataset/tum/rgbd_dataset_freiburg3_long_office_household.orig.bag
+datasets/README.md
+datasets/euroc/MH_01_easy.bag
+datasets/tum/rgbd_dataset_freiburg3_long_office_household.bag
+datasets/tum/rgbd_dataset_freiburg3_long_office_household.orig.bag
+datasets/tum/tum_rename_world_kinect_frame.py
